@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class HomeController {
-    String message = "Hello from Spring Boot with Azure DevOps and Gradle";
+    String message = "Hello from Spring Boot with GitHub and Gradle";
 
     @GetMapping("/")
     public String index() {
