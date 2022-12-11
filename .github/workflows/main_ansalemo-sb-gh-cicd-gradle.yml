@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy JAR app to Azure Web App - ansalemo-sb-gh-cicd-gradle
+name: Build and deploy JAR app to Azure Web App - ansalemo-java-jar-ghactions
 
 on:
   push:
@@ -49,16 +49,16 @@ jobs:
 
       - uses: azure/appservice-settings@v1
         with:
-          app-name: 'ansalemo-sb-gh-cicd-gradle'
+          app-name: 'ansalemo-java-jar-ghactions'
           app-settings-json: '[{ "name": "JAVA_OPTS", "value": "-Dfoo=bar" }]' 
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
-          app-name: 'ansalemo-sb-gh-cicd-gradle'
+          app-name: 'ansalemo-java-jar-ghactions'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_1C2D35A1EADA45FD915ABA190591359D }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_TEST }}
           package: 'azure-0.0.1-SNAPSHOT.jar'
 
       - run: |
