@@ -9,13 +9,13 @@ trigger:
 variables:
 
   # Azure Resource Manager connection created during pipeline creation
-  azureSubscription: '5f101492-0940-42ab-be4f-f19f1e1ae302'
+  azureSubscription: '000000-0000-0000-0000-000000000000'
 
   # Web app name
-  webAppName: 'ansalemo-java-gradle-sb'
+  webAppName: 'myapp'
 
   # Environment name
-  environmentName: 'ansalemo-java-gradle-sb'
+  environmentName: 'myapp'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
@@ -66,7 +66,7 @@ stages:
         deploy:
           steps:
           - task: AzureWebApp@1
-            displayName: 'Azure Web App Deploy: ansalemo-java-gradle-sb'
+            displayName: 'Azure Web App Deploy: myapp'
             inputs:
               azureSubscription: $(azureSubscription)
               appType: webAppLinux
