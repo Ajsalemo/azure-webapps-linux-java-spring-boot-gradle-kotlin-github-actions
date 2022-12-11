@@ -58,7 +58,7 @@ jobs:
         with:
           app-name: 'ansalemo-java-jar-ghactions'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_TEST }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_1C2D35A1EADA45FD915ABA190591359D }}
           package: 'azure-0.0.1-SNAPSHOT.jar'
 
       - run: |
